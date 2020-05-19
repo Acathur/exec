@@ -7,7 +7,7 @@ Execute and get the output of a shell or bash command in Deno.
 ## Usage
 
 ```ts
-import { exec } from 'https://deno.land/x/exec/mod.ts'
+import { exec } from 'https://deno.land/x/execute/mod.ts'
 
 await exec('deno -V')
 // --> deno 1.0.0

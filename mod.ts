@@ -29,7 +29,7 @@ export const exec = async (cmd: string | string[] | ExecOptions) => {
 	const { success } = await process.status()
 
 	if (!success) {
-		const msg = process.stderr && removeTrailingLineBreak(decoder.decode(await Deno.readAll(process.stderr)))
+		const msg = removeTrailingLineBreak(decoder.decode(await process.stderrOutput()))
 
 		process.close()
 
